@@ -8,7 +8,7 @@ def echo(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=update.message.text)
 
 def main():
-    updater = Updater(token='6174101559:AAGD0F0lXrVZ9aWtPc4TSc8yDKquw7McO5U', use_context=True)
+    updater = Updater(token=os.environ['6174101559:AAGD0F0lXrVZ9aWtPc4TSc8yDKquw7McO5U'], use_context=True)
     dispatcher = updater.dispatcher
 
     start_handler = CommandHandler('start', start)
